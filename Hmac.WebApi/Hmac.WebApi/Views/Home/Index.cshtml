@@ -1,4 +1,5 @@
-﻿<div id="body">
+﻿@model List<string>
+<div id="body">
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
@@ -39,6 +40,16 @@
                 You can easily find a web hosting company that offers the right mix of features
                 and price for your applications.
                 <a href="http://go.microsoft.com/fwlink/?LinkId=245164">Learn more…</a>
+            </li>
+            <li class="four">
+                @if (Model != null)
+                {
+                    <h5>Values from secured API controller</h5>
+                    foreach (var item in Model)
+                    {
+                        <p>item</p>    
+                    }
+                }
             </li>
         </ol>
     </section>

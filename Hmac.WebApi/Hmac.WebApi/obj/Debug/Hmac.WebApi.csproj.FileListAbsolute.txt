@@ -127,3 +127,5 @@ C:\Users\Carlo\Documents\GitHub\Hmac.WebApi\Hmac.WebApi\Hmac.WebApi\bin\zh-Hant\
 C:\Users\Carlo\Documents\GitHub\Hmac.WebApi\Hmac.WebApi\Hmac.WebApi\obj\Debug\Hmac.WebApi.csprojResolveAssemblyReference.cache
 C:\Users\Carlo\Documents\GitHub\Hmac.WebApi\Hmac.WebApi\Hmac.WebApi\obj\Debug\Hmac.WebApi.dll
 C:\Users\Carlo\Documents\GitHub\Hmac.WebApi\Hmac.WebApi\Hmac.WebApi\obj\Debug\Hmac.WebApi.pdb
+C:\Users\Carlo\Documents\GitHub\Hmac.WebApi\Hmac.WebApi\Hmac.WebApi\bin\RestSharp.dll
+C:\Users\Carlo\Documents\GitHub\Hmac.WebApi\Hmac.WebApi\Hmac.WebApi\bin\RestSharp.xml

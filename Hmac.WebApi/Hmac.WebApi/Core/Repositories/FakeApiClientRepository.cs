@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Hmac.WebApi.Controllers;
 using Hmac.WebApi.Core.Models;
 
 namespace Hmac.WebApi.Core.Repositories
