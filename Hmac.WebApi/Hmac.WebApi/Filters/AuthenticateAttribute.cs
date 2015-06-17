@@ -25,12 +25,11 @@ namespace Hmac.WebApi.Filters
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
             var request = actionContext.Request;
-            var response = actionContext.Response;
             var authErrorMessage = "";
 
             try
             {
-                if (IsAuthenticated(request, response))
+                if (IsAuthenticated(request))
                     return;
             }
             catch (SecurityException ex)
@@ -47,7 +46,7 @@ namespace Hmac.WebApi.Filters
             actionContext.Response = request.CreateResponse(HttpStatusCode.Unauthorized, errorResponse);
         }
 
-        internal bool IsAuthenticated(HttpRequestMessage request, HttpResponseMessage response)
+        internal bool IsAuthenticated(HttpRequestMessage request)
         {
             DateTime requestDate;
             if (!DateTime.TryParse(ApiSignature.GetDate(request.Headers), out requestDate))

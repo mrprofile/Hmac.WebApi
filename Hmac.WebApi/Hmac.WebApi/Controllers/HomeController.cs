@@ -6,6 +6,11 @@ using RestSharp;
 
 namespace Hmac.WebApi.Controllers
 {
+    public class BaseController : Controller
+    {
+        public EsqtvApi RestClient { get; set; }
+    }
+
     public class HomeController : Controller
     {
         public ActionResult Index()
