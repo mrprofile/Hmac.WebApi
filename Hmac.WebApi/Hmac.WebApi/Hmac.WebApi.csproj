@@ -161,7 +161,12 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Filters\AuthenticateAttribute.cs" />
+    <Compile Include="Core\Models\ApiClient.cs" />
+    <Compile Include="Core\Repositories\ApiClientRepository.cs" />
+    <Compile Include="Core\Repositories\FakeApiClientRepository.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Core\Repositories\IApiClientRepository.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Core\ApiCustomHttpHeaders.cs" />
     <Compile Include="Core\ApiSignature.cs" />
