@@ -164,6 +164,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Core\ApiLibrary\EsqtvApi.cs" />
     <Compile Include="Core\ApiLibrary\MethodExtensions.cs" />
     <Compile Include="Core\ApiLibrary\ParameterExtensions.cs" />
