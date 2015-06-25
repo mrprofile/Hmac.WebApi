@@ -13,7 +13,7 @@ namespace Hmac.WebApi.Controllers
 
     public class ApiBaseController : ApiController
     {
-       
+
         public HttpResponseMessage Ok()
         {
             return new HttpResponseMessage(HttpStatusCode.Accepted);
@@ -29,14 +29,16 @@ namespace Hmac.WebApi.Controllers
     }
     public class ValuesController : ApiBaseController
     {
-         [PagingAttribute]
+        [PagingAttribute]
         public HttpResponseMessage Get(MyRequest request)
         {
-           
+
             var response = new[] { "value1", "value2" };
 
             return Ok(response);
         }
+
+
 
         // GET api/values/5
         public string Get(int id)
