@@ -7,12 +7,37 @@ using System.Runtime.Caching;
 using System.Security;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
+using System.Web.WebPages;
 using Hmac.WebApi.Core;
 using Hmac.WebApi.Core.Models;
 using Hmac.WebApi.Core.Repositories;
 
 namespace Hmac.WebApi.Filters
 {
+    public class PagingAttribute : ActionFilterAttribute
+    {
+        public override void OnActionExecuting(HttpActionContext actionContext)
+        {
+            var query = actionContext.Request.GetQueryNameValuePairs().FirstOrDefault(x => x.Key == "query").Value;
+            var limit = actionContext.Request.GetQueryNameValuePairs().FirstOrDefault(x => x.Key == "limit").Value;
+            var offset = actionContext.Request.GetQueryNameValuePairs().FirstOrDefault(x => x.Key == "offset").Value;
+            var dtoRequest = actionContext.ActionArguments.ContainsKey("request") ? actionContext.ActionArguments["request"] : "";
+
+            var dto = dtoRequest as QueryBase;
+            if (dto == null) { return; }
+            dto.Query = query;
+            dto.Limit = limit.IsEmpty() ? 24 : int.Parse(limit);
+            dto.Offset = offset.IsEmpty() ? 0 : int.Parse(offset);
+            /*var dto = new QueryBase
+            {
+                Query = query,
+                Limit = String.IsNullOrEmpty(limit) ? 24 : int.Parse(limit),
+                Offset = String.IsNullOrEmpty(offset) ? 0 : int.Parse(offset)
+            };*/
+
+           
+        }
+    }
     public class AuthenticateAttribute : ActionFilterAttribute
     {
         public IApiClientRepository FakeApiClientRepository { get; set; }

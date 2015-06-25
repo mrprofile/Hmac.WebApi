@@ -185,6 +185,8 @@
     <Compile Include="Core\ApiLibrary\EsqtvApi.cs" />
     <Compile Include="Core\ApiLibrary\MethodExtensions.cs" />
     <Compile Include="Core\ApiLibrary\ParameterExtensions.cs" />
+    <Compile Include="Core\Models\PageResult.cs" />
+    <Compile Include="Core\Models\QueryBase.cs" />
     <Compile Include="Filters\AuthenticateAttribute.cs" />
     <Compile Include="Core\Models\ApiClient.cs" />
     <Compile Include="Core\Repositories\ApiClientRepository.cs" />
