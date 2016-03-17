@@ -5,6 +5,7 @@ using RestSharp;
 
 namespace Hmac.WebApi.Controllers
 {
+    //Added a comment in controller
     public class HomeController : BaseController
     {
         public ActionResult Index()
